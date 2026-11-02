@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #080b12;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Nvabar */
+
+.navbar {
+    background: rgba(8, 11, 18, 0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.8);
+    padding: 18px 0;
+}
+
+.navbar-brand {
+
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+
+}
+
+.navbar-brand span {
+    color: #00D9FF;
+}
+
+.nav-link {
+    color: #B7C0D1;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #00D9FF;
+}
+
+/* Hero Section */
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    background: radial-gradient(circle at 80% 30%,
+            rgba(91, 45, 180, 0.25),
+            transparent 35%),
+        radial-gradient(circle at 20% 80%,
+            rgba(0, 180, 255, 0.15),
+            transparent 35%),
+        #080B12
+}
+
+.hero-subtitle {
+    color: #00D9FF;
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero-section h1 {
+    font-size: clamp(42px, 6vw, 75px);
+    font-weight: 900;
+    line-height: 1.15;
+    max-width: 850px;
+}
+
+.hero-section h1 span {
+    background: linear-gradient(90deg,
+            #00D9FF,
+            #8B5CF6);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-description {
+    color: #A7B0C0;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #087EFF, #7545E8);
+    border: none;
+    padding: 12px 25px;
+}
+
+.btn-primary:hover {
+    opacity: 0.85;
+}
+
+.btn-outline-light {
+    padding: 12px 25px;
+}
+
+.profile-image {
+    width: 320px;
+    max-width: 80vw;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 3px solid #00D9FF;
+
+    box-shadow:
+        0 0 20px rgba(0, 217, 255, 0.4),
+        0 0 60px rgba(139, 92, 246, 0.2);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Mobile Navbar */
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* mobile-specific image styling */
+@media (max-width: 991.98px) {
+    .profile-image {
+        width: 260px;
+        margin: 35px auto 0;
+    }
+
+    .hero-section {
+        padding: 120px 0 70px;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* About section */
+
+.about-section {
+    padding: 110px 0;
+    background: #0B0F19;
+}
+
+.section-subtitle {
+    color: #00D9FF;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.section-title {
+    font-size: 55px;
+    font-weight: 800;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    padding: 35px;
+    backdrop-filter: blur(12px);
+    transition: 0.3s ease;
+}
+
+.about-card:hover {
+    border-color: rgba(0, 217, 255, 0.5);
+    transform: translateY(-5px);
+}
+
+.about-card h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.about-card p {
+    color: #A7B0C0;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 110px 0;
+    background: #080B12;
+}
+
+.skills-heading {
+    margin-bottom: 55px;
+}
+
+.skill-card {
+    height: 100%;
+    padding: 30px 25px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 19px;
+    backdrop-filter: blur(12px);
+    transition: 0.3s ease;
+}
+
+.skill-card h3 {
+    color: #00D9FF;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-card li {
+
+    color: #A7B0C0;
+    font-size: 15px;
+    margin-bottom: 15px;
+    padding-left: 18px;
+    position: relative;
+}
+
+.skill-card li:before{
+    content: "▹";
+    color: #00D9FF;
+    position: absolute;
+    left: 0;
+}
