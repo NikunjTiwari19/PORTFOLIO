@@ -403,3 +403,27 @@ body {
         gap: 5px;
     }
 }
+
+/* Footer Section */
+
+.footer-section {
+    padding: 25px 0;
+    background: #0B0F19;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-section p {
+    color: #A7B0C0;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-section span {
+    color: #00D9FF;
+    font-weight: 600;
+}
+
+.footer-copyright {
+    font-size: 12px !important;
+}
+
